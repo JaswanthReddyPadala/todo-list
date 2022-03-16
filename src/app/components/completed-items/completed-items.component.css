@@ -1,0 +1,43 @@
+.completed-item-container{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #7F00FF;
+    /* border-style: solid     ; */
+    /* border-image: linear-gradient(to right bottom, #7F00FF 50%, #E100FF 50%); */
+    ;
+    /* border-radius: 5px; */
+}
+
+.completed-item-container p{
+    width: 82.5%;
+    height: max-content;
+    font-size: 1.1rem;
+    overflow-x: hidden;
+    word-wrap: break-word;
+}
+
+.completed-item-container button{
+    background-color: rgb(45, 45, 236);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.completed-item-container button img{
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+}
+
+.completed-item-container #redo{
+    width: 20px;
+    height: 20px;
+}
+
+.completed-item-container #delete{
+    width: 25px;
+    height: 25px;
+}

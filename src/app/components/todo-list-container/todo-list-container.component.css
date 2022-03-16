@@ -1,0 +1,10 @@
+.todo-list-container{
+    width: 40vw;
+    height: 90vh;
+    border-radius: 15px;
+    padding: 3%;
+    background-color: #fff;
+    box-shadow: 5px 5px 110px 10px rgba(0,0,0,0.56);
+    -webkit-box-shadow: 5px 5px 110px 10px rgba(0,0,0,0.56);
+    -moz-box-shadow: 5px 5px 110px 10px rgba(0,0,0,0.56);
+}

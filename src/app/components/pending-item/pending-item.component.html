@@ -1,0 +1,4 @@
+<div *ngIf="item.status === 'Pending'" class="pending-item-container">
+    <p>{{ item.description }}</p>
+    <button (click)="moveTo(item.id)" name="pending-item" (id)="item.id"><img src="../../../assets/done-icon.svg" alt=""></button>
+</div>

@@ -1,0 +1,6 @@
+<div *ngIf="item.status === 'Completed'" class="completed-item-container">
+    <p>{{ item.description }}</p>
+    <!-- <button type="checkbox" name="pending-item" (id)="item.id"> -->
+    <button (click)="redoTodoItem(item.id)" id="redo"><img src="../../../assets/redo-icon.svg" alt=""></button>
+    <button (click)="deleteTodoItem(item.id)" id="delete"><img src="../../../assets/delete-icon.svg" alt=""></button>
+</div>

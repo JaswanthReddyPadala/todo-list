@@ -2,13 +2,25 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
+import { TodoListContainerComponent } from './components/todo-list-container/todo-list-container.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
+import { TodoItemsContainerComponent } from './components/todo-items-container/todo-items-container.component';
+import { PendingItemComponent } from './components/pending-item/pending-item.component';
+import { CompletedItemsComponent } from './components/completed-items/completed-items.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoListContainerComponent,
+    SearchBarComponent,
+    TodoItemsContainerComponent,
+    PendingItemComponent,
+    CompletedItemsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

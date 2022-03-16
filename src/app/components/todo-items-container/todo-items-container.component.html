@@ -1,0 +1,29 @@
+<div class="todo-items-container">
+    
+    <div *ngIf="viewOption === 'Pending'" class="items-options pending-options">
+        <h1 id="pending" (click)="viewPendingItems()">Pending</h1>
+        <!-- *ngClass="viewOption == 'Pending' ? 'active' : ''" -->
+        <h1 id="completed" (click)="viewCompletedItems()">Completed</h1>
+    </div>
+
+    <div *ngIf="viewOption === 'Completed'" class="items-options completed-options">
+        <h1 id="pending" (click)="viewPendingItems()">Pending</h1>
+        <!-- *ngClass="viewOption == 'Pending' ? 'active' : ''" -->
+        <h1 id="completed" (click)="viewCompletedItems()">Completed</h1>
+    </div>
+
+    <div class="items-container">
+        <!-- {{viewOption}} -->
+
+        <div *ngIf="viewOption === 'Pending'" class="pending-items items-container">
+            <app-pending-item *ngFor="let todoItem of todoItems; let i=index" [item]="todoItem" (markCompletedEvent)="markCompleted($event)" (id)="i"></app-pending-item>
+        </div>
+
+
+        <div *ngIf="viewOption === 'Completed'" class="completed-items items-container">
+            <app-completed-items *ngFor="let todoItem of todoItems; let i=index" [item]="todoItem" (redoEvent)="redoTodo($event)" (deleteEvent)="deleteTodo($event)" (id)="i"></app-completed-items>
+        </div>
+    </div>
+
+    <!-- <button (click)="showTodoItems()">Show</button> -->
+</div>
