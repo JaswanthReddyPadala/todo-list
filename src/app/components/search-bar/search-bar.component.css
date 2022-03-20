@@ -1,14 +1,13 @@
 .search-bar-container{
     width: 100%;
-    padding: 0.5rem;
+    padding: 5%;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
-    height: 15%;
+    height: 17.5%;
 }
 
 .search-bar-container input{
-    height: 3rem;
+    height: 3.5rem;
     width: 85%;
     padding: 0.15rem 0.5rem;
     border: 1px solid #cb68f1;
@@ -32,8 +31,8 @@
 }
 
 .search-bar-container button{
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     font-size: 2rem;
     color: white;
     background-image: linear-gradient(to left bottom, #b060ff, #ec5dff);

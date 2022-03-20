@@ -1,4 +1,4 @@
 <div class="search-bar-container">
-    <input [(ngModel)]="description" type="text" placeholder="Ex: Buy some snacks ...">
+    <input [(ngModel)]="description" type="text" placeholder="Ex: Buy some snacks ..." (keyup)="addTodoEnter($event)">
     <button (click)="addTodo()"> + </button>
 </div>

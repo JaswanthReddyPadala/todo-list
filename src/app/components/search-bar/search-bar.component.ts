@@ -1,12 +1,13 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 
 export enum todoStatus {
-  Pending="Pending",
-  Completed="Completed"
+  Pending = "Pending",
+  Completed = "Completed"
 }
 
 export interface Todo {
-  id:number,
+  id: number,
   description: string,
   status: todoStatus
 }
@@ -22,25 +23,27 @@ export class SearchBarComponent implements OnInit {
   id: number = 1;
   description: string = "";
   status = todoStatus;
-  
-  @Output() newTodoEvent = new EventEmitter<Todo>();
 
-  constructor() { }
+  constructor(private todoService: TodoService) { }
 
   ngOnInit(): void {
   }
 
-  addTodo(){
-    let newTodoItem = {} as Todo;
-    newTodoItem.id = this.id;
-    this.id+=1;
-    
-    newTodoItem.description = this.description;
-    this.description = "";
+  addTodo() {
+    if (this.description != "" && this.description[0] != " ") {
+      this.todoService.addTodoItem(this.description);
+      this.description = "";
+    }
 
-    newTodoItem.status = todoStatus.Pending;
+  }
 
-    this.newTodoEvent.emit(newTodoItem);
+  addTodoEnter(event: any) {
+
+    if (event.code === "Enter" && this.description != "" && this.description[0] != " ") {
+      this.todoService.addTodoItem(this.description);
+      this.description = "";
+    }
+
   }
 
 }

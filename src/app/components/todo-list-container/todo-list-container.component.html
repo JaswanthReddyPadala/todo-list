@@ -1,5 +1,14 @@
 <div class="todo-list-container">
-    <app-search-bar (newTodoEvent)="newTodo($event)"></app-search-bar>
-    <app-todo-items-container [todoItems]="todoListtems" (markCompletedEvent)="markCompletedTodoItem($event)"
-        (redoTodoEvent)="redoTodoItem($event)" (deleteTodoEvent)="deleteTodoItem($event)"></app-todo-items-container>
+    <div class="todo-list-container_left">
+        <div class="logo-container">
+            <img src="../../../assets/logo.svg" alt="logo">
+            <h1>TODO</h1>
+        </div>
+        <app-todo-details></app-todo-details>
+    </div>
+
+    <div class="todo-list-container_right">
+        <app-search-bar></app-search-bar>
+        <app-todo-items-container></app-todo-items-container>
+    </div>
 </div>

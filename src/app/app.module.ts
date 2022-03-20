@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { TodoItemsContainerComponent } from './components/todo-items-container/todo-items-container.component';
 import { PendingItemComponent } from './components/pending-item/pending-item.component';
 import { CompletedItemsComponent } from './components/completed-items/completed-items.component';
+import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CompletedItemsComponent } from './components/completed-items/completed-
     SearchBarComponent,
     TodoItemsContainerComponent,
     PendingItemComponent,
-    CompletedItemsComponent
+    CompletedItemsComponent,
+    TodoDetailsComponent
   ],
   imports: [
     BrowserModule,

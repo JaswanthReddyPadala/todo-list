@@ -1,0 +1,35 @@
+.todo-details-container{
+    width: 100%;
+}
+
+.todo-details-item{
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.todo-details-item{
+    border: 2px solid #181818;
+    margin-bottom: 1.5rem;
+}
+
+.todo-details-item h2{
+    width: 80%;
+    background-color: #fff;
+    padding: 5% 10%;
+}
+
+h2{
+    margin-right: 0.5rem;
+}
+
+p{
+    font-size: 1.75rem;
+    padding: 5% 10%;
+    font-weight: 800;
+}
+
+.total h2{
+    background-color: #181818;
+    color: white;
+}

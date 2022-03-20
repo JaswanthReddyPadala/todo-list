@@ -5,10 +5,6 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #7F00FF;
-    /* border-style: solid     ; */
-    /* border-image: linear-gradient(to right bottom, #7F00FF 50%, #E100FF 50%); */
-    ;
-    /* border-radius: 5px; */
 }
 
 .completed-item-container p{
@@ -20,8 +16,6 @@
 }
 
 .completed-item-container button{
-    background-color: rgb(45, 45, 236);
-    color: white;
     border: none;
     cursor: pointer;
 }

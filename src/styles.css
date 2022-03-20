@@ -11,5 +11,8 @@ body{
     overflow-x: hidden;
     height:100vh;
     background-image: linear-gradient(to right bottom, #7F00FF, #E100FF);
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    /* font-family: 'Annie Use Your Telescope', cursive; */
+    /* font-family: 'Architects Daughter', cursive; */
+    font-family: 'Patrick Hand', cursive;
 }

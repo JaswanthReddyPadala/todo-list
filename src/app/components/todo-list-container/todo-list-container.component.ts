@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TodoService } from 'src/app/services/todo.service';
 import { Todo, todoStatus } from '../search-bar/search-bar.component';
 
 @Component({
@@ -10,35 +11,11 @@ export class TodoListContainerComponent implements OnInit {
 
   todoListtems: Array<Todo> = [];
 
-  // pendingTodoItems: Array<Todo> = [];
-  // completedTodoItems: Array<Todo> = [];
-  constructor() { }
+  constructor(private todoService: TodoService) {
+    this.todoService.todoData.subscribe(data => this.todoListtems = data);
+  }
 
 
   ngOnInit(): void {
-  }
-
-  newTodo(newItem: Todo) {
-    let newObj = newItem;
-    this.todoListtems.push(newObj);
-    // console.log(this.todoListtems);
-  }
-
-  markCompletedTodoItem(num: number){
-    console.log(num);
-    this.todoListtems.forEach(each => each.id==num ? each.status = todoStatus.Completed : todoStatus.Pending );
-    // this.pendingTodoItems = this.todoListtems.filter(each => each.status=todoStatus.Pending);
-    console.log(this.todoListtems);
-  }
-
-  redoTodoItem(num :number){
-    console.log(num);
-    this.todoListtems.forEach(each => each.id==num ? each.status = todoStatus.Pending : todoStatus.Completed );
-    // this.completedTodoItems = this.todoListtems.filter(each => each.status=todoStatus.Completed);
-    console.log(this.todoListtems);
-  }
-
-  deleteTodoItem(num: number){
-    this.todoListtems = this.todoListtems.filter(each => each.id!=num );
   }
 }
