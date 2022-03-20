@@ -1,5 +1,9 @@
 <div *ngIf="item.status === 'Completed'" class="completed-item-container">
-    <p>{{ item.description }}</p>
-    <button (click)="redoTodoItem(item.id)" id="redo"><img src="../../../assets/redo-icon.svg" alt=""></button>
-    <button (click)="deleteTodoItem(item.id)" id="delete"><img src="../../../assets/delete-icon.svg" alt=""></button>
+    <p>{{ item.date | date:'short' }}</p>
+    <div class="completed-item-main">
+        <p>{{ item.description | firstLetterCapital }}</p>
+        <button (click)="redoTodoItem(item.id)" id="redo"><img src="../../../assets/redo-icon.svg" alt=""></button>
+        <button (click)="deleteTodoItem(item.id)" id="delete"><img src="../../../assets/delete-icon.svg"
+                alt=""></button>
+    </div>
 </div>
