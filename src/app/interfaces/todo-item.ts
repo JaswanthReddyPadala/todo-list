@@ -6,5 +6,6 @@ export enum todoStatus {
 export interface TodoItem {
     id:number,
     description: string,
-    status: todoStatus
+    status: todoStatus,
+    date: object
 }

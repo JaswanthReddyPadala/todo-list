@@ -23,6 +23,7 @@ export class TodoService {
     todoObj.description = description;
     todoObj.id = ++this.id;
     todoObj.status = todoStatus.Pending;
+    todoObj.date = new Date();
 
     this.maintTodoList.push(todoObj);
 

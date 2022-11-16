@@ -9,6 +9,7 @@ import { TodoItemsContainerComponent } from './components/todo-items-container/t
 import { PendingItemComponent } from './components/pending-item/pending-item.component';
 import { CompletedItemsComponent } from './components/completed-items/completed-items.component';
 import { TodoDetailsComponent } from './components/todo-details/todo-details.component';
+import { FirstLetterCapitalPipe } from './pipes/first-letter-capital.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { TodoDetailsComponent } from './components/todo-details/todo-details.com
     TodoItemsContainerComponent,
     PendingItemComponent,
     CompletedItemsComponent,
-    TodoDetailsComponent
+    TodoDetailsComponent,
+    FirstLetterCapitalPipe
   ],
   imports: [
     BrowserModule,

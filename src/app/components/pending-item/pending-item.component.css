@@ -2,20 +2,32 @@
     width: 100%;
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
     border-bottom: 2px solid #7F00FF;
 }
 
-.pending-item-container p{
+.pending-item-container > p{
+    color: #6e6e6e;
+}
+
+.pending-item-main{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.pending-item-main p{
     width: 87.5%;
     height: max-content;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     overflow-x: hidden;
     word-wrap: break-word;
 }
 
-.pending-item-container button{
+.pending-item-main button{
     width: 25px;
     height: 25px;
     border: none;
